@@ -1,0 +1,454 @@
+/* Sortable list */
+.sortable-list .list-item {
+	background-color: #fff;
+	margin-top: 9px;
+}
+
+.sortable-list .list-item.predefined .menu-item-title { color: #888; }
+.sortable-list .list-item.predefined .menu-item-toggle { display: none; }
+
+.sortable-list .list-item-handle {
+	border: 1px solid #dfdfdf;
+	box-shadow:  1px 1px rgba(0, 0, 0, .04);
+	cursor: move;
+	padding: 10px 15px;
+}
+
+.sortable-list .list-item-handle:hover {
+	border-color: #aaa;
+}
+
+.list-item-placeholder {
+	background: repeating-linear-gradient(135deg, #fafafa, #fafafa 10px, #fdfdfd 10px, #fdfdfd 20px);
+	margin-top: 9px;
+	box-sizing: border-box;
+}
+
+.sortable-list .menu-item-title {
+	color: #222;
+	line-height: 20px;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.sortable-list .menu-item-toggle {
+	float: right;
+	color: #aaa;
+	width: 20px;
+	height: 20px;
+	margin-right: -5px;
+	outline: none;
+}
+
+.sortable-list .menu-item-toggle:before {
+	display: inline-block;
+	font: 400 20px/1 dashicons;
+	content: '\f140' !important;
+	text-decoration: none !important;
+}
+
+.sortable-list .menu-item-toggle.opened:before {
+	content: '\f142' !important;
+}
+
+.sortable-list .list-item-settings {
+	background-color: #fff;
+	color: #444;
+	display: none;
+	padding: 10px;
+	border: 1px solid #e5e5e5;
+	border-top: none;
+	box-shadow:  1px 1px rgba(0, 0, 0, .04);
+}
+
+.mapplic-list-location > a.list-item-handle {
+	border: none !important;
+}
+
+.mapplic-list-container {
+	overflow-x: hidden;
+}
+
+/* Styles rect */
+.mapplic-style-rect {
+	background: #F7F7F7;
+	border: 2px solid #eee;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 0 8px -5px -5px;
+	position: static !important;
+	border-radius: 4px;
+	cursor: default;
+	transition: background-color 0.1s, border-color 0.1s;
+}
+
+/* General styles */
+.postbox label {
+	font-style: italic;
+	display: inline-block;
+	margin-bottom: 8px;
+	width: 100%;
+}
+
+#minor-publishing label {
+	display: inline;
+}
+
+.postbox label input[type=text],
+.postbox label select {
+	margin-top: 4px;
+}
+
+.right { float: right; }
+
+.mapplic-landmark-field,
+.input-select,
+.input-text {
+	width: 100%;
+	margin-bottom: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.input-text.buttoned {
+	width: 75%;
+}
+
+/* Media button */
+.media-button {
+	vertical-align: baseline !important;
+}
+
+.media-button .dashicons {
+	line-height: 24px !important;
+}
+
+/* Landmark metabox */
+.duplicate-landmark,
+#new-landmark {
+	margin-top: 6px !important;
+}
+
+#landmark-settings {
+	display: none;
+	margin-top: 12px;
+}
+
+#landmark-settings .latitude-input { margin-right: 5%; }
+
+#wp-descriptioninput-wrap {
+	margin-bottom: 20px;
+}
+
+.sortable-list .list-item-settings input[type="checkbox"] {
+	float: left;
+	margin-right: 10px;
+	margin-top: 2px;
+}
+
+.list-item-settings .item-delete {
+	color:  #a00;
+}
+
+.list-item-settings .item-delete:hover {
+	color: red;
+}
+
+.list-item.new-item {
+	display: none;
+}
+
+input[type="text"] {
+	margin-bottom: 10px;
+}
+
+input[type="button"] {
+	outline: none;
+}
+
+/* Admin map */
+#mapplic-admin-map {
+	width: 100%;
+	float: right;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 480px;
+}
+
+/* Search */
+.mapplic-search-input {
+	margin: 0 !important;
+}
+
+/* Location ID */
+.mapplic-locationid {
+	background-color: #222;
+	color: #fff;
+	cursor: pointer;
+	position: absolute;
+	margin: 10px;
+	padding: 4px 6px;
+	font-size: 14px;
+	top: 0;
+	left: 0;
+}
+
+/* Pins */
+.selected-pin {
+	box-shadow: 0 2px 8px #049cc5 !important;
+	touch-action: none;
+}
+
+.mapplic-pin {
+	box-shadow: none;
+}
+
+.mapplic-pin.hidden {
+	background-image: url(../../images/target.svg);
+	background-size: 20px 20px;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	margin-left: -10px;
+	display: block;
+	font-size: 0;
+}
+
+.mapplic-pin.hidden,
+.mapplic-pin.no-fill {
+	background-color: transparent !important;
+}
+
+#pins-input {
+	margin-top: 0;
+	margin-bottom: 10px;
+	max-height: 180px;
+	overflow-y: auto;
+}
+
+#pins-input p {
+	margin: 4px 0 4px 2px;
+	color: #666;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+#pins-input span {
+	color: #aaa;
+	display: block;
+	font-size: 10px;
+	line-height: 76px;
+	text-align: center;
+}
+
+#pins-input > div {
+	background-color: #f8f8f8;
+	border: 1px solid #f8f8f8;
+	border-radius: 4px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 2px;
+	position: relative;
+	width: 38px;
+	height: 46px;
+	transition: border-color 0.1s ease-in-out;
+}
+
+#pins-input > div.selected {
+	border-color: #5b9dd9;
+	box-shadow: 0 0 2px rgba(30,140,190,0.8);
+}
+
+#pins-input .mapplic-pin {
+	position: absolute;
+	margin-top: 0;
+	top: 20%;
+	left: 50%;
+}
+
+#pins-input .pin-classic { top: 10%; }
+#pins-input .pin-dot { left: 20%; }
+#pins-input .pin-lg { top: 3px; }
+#pins-input .pin-sm { top: 30%; }
+
+.mapplic-tag {
+	border: none;
+}
+
+/* Geoposition Metabox */
+#geopos {
+	padding-top: 8px;
+}
+
+.geopos-field {
+	width: 46%;
+}
+
+#leftLng.geopos-field { margin-right: 5%; }
+#bottomLat.geopos-field { margin-bottom: 0; }
+
+.geopos-corner {
+	width: 5%;
+	height: 10px;
+	display: inline-block;
+	margin: 0 9%;
+	border: 2px solid #eee;
+}
+
+.geopos-corner.tl {
+	border-bottom: none;
+	border-right: none;
+}
+
+
+.geopos-corner.tr {
+	border-bottom: none;
+	border-left: none;
+}
+
+.geopos-corner.bl {
+	border-top: none;
+	border-right: none;
+}
+
+.geopos-corner.br {
+	border-top: none;
+	border-left: none;
+}
+
+.landmark-geolocation { display: none; }
+
+/* Level select */
+.mapplic-levels-select {
+	background: #fff !important;
+	border-radius: 0 !important;
+	box-shadow: none;
+	padding: 8px !important;
+	line-height: 20px !important;
+}
+
+/* Settings panel */
+#settings label {
+	max-width: 240px;
+}
+
+label.field-small {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.field-medium input {
+	max-width: 290px;
+}
+
+/* Mapdata */
+#mapplic-mapdata {
+	margin-top: 10px;
+	width: 100%;
+}
+
+.mapplic-rawedit {
+	margin: 20px 0 10px 0;
+	display: none;
+}
+
+/* Settings group */
+.settings-group {
+	margin-top: 16px;
+}
+
+.settings-group span,
+.settings-group input::placeholder {
+	transition: opacity 0.1s;
+}
+
+.settings-group.disabled span,
+.settings-group.disabled input::placeholder {
+	opacity: 0.5;
+}
+
+/* Submit button */
+#post-body .submit {
+	float: right;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/* Mapplic logo */
+.mapplic-logo {
+	display: inline-block;
+	margin-left: 1px;
+}
+
+/* Remove Draft */
+#minor-publishing-actions {
+	display: none;
+}
+
+/* Help toggle */
+.help-toggle {
+	opacity: 0.5;
+	cursor: pointer;
+	transition: 0.1s opacity;
+}
+
+.help-toggle:hover {
+	opacity: 1;
+}
+
+.help-content {
+	display: none;
+}
+
+/* colorpicker */
+.wp-picker-container {
+	display: inline-block;
+}
+
+.wp-picker-container.wp-picker-active {
+	margin-bottom: 10px;
+}
+
+.wp-picker-container label {
+	width: auto;
+}
+
+.wp-core-ui .button.button-small.wp-picker-clear {
+	margin-left: 5px;
+	min-height: 30px;
+}
+
+/* code editor */
+.CodeMirror {
+	border: 1px solid #ddd;
+	max-width: 800px;
+}
+
+/* Image and icon pins */
+.mapplic-pin.pin-image {
+	background-image: url(../../images/pin-image.png);
+}
+
+.mapplic-pin.pin-icon {
+	background-image: url(../../images/house.svg);
+	background-size: 16px;
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	font-size: 0 !important;
+	width: 16px;
+	height: 16px;
+	margin-top: -8px;
+	margin-left: -8px;
+	transform-origin: 50%;
+}
+
+/* Interactive Elements */
+[id^=MLOC] > *[id]:hover, [id^=landmark] > *[id]:hover {
+	cursor: pointer;
+}
+
+/* reveal off */
+.mapplic-pin { visibility: visible !important; }
